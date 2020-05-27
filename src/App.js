@@ -7,18 +7,20 @@ import "./App.css";
 
 function App() {
   const [photo, setPhoto] = useState([]);
+  const [date, setDate] = useState('');
 
   useEffect(() => {
-    axios.get('https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY')
+    axios.get(`https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY&date=${date}`)
     .then(response => {
       setPhoto(response.data)
       console.log(response.data)
     });
-  }, [])
+  }, [date])
 
   return (
     <div className="App">
-      <Header date={photo.date}/>
+      <Header date={photo.date} changeDate={setDate} />
+
       <MainContent photo={photo}/>
       <Footer owner={photo.copyright}/>
     </div>
