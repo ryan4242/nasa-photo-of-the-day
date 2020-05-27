@@ -6,20 +6,21 @@ import Footer from './components/footer/Footer'
 import "./App.css";
 
 function App() {
-  // const [photos, setPhotos] = useState([]);
+  const [photo, setPhoto] = useState([]);
 
-  // useEffect(() => {
-  //   axios.get('https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY')
-  //   .then(response => {
-  //     console.log(response)
-  //   });
-  // }, [])
+  useEffect(() => {
+    axios.get('https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY')
+    .then(response => {
+      setPhoto(response.data)
+      console.log(response.data)
+    });
+  }, [])
 
   return (
     <div className="App">
-      <Header />
-      <MainContent />
-      <Footer />
+      <Header date={photo.date}/>
+      <MainContent photo={photo}/>
+      <Footer owner={photo.copyright}/>
     </div>
   );
 }

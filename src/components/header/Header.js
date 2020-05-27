@@ -1,13 +1,11 @@
 import React from 'react';
 import styles from './header.css'
 
-let date = new Date()
-
-const Header = () => {
+const Header = props => {
   return (
     <header className='header'>
       <h1 className='title'>NASA Photo Of The Day</h1>
-      <p className='date'>{new Date().toDateString()}</p>
+      <p className='date'>{props.date}</p>
     </header>
   )
 }

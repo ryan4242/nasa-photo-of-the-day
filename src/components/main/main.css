@@ -9,6 +9,10 @@ main {
   color: #fff;
 }
 
+.description h3 {
+  padding-bottom: 1rem;
+}
+
 .img-container {
   margin-bottom: 2rem;
   display: flex;
