@@ -8,3 +8,17 @@
   justify-content: space-between;
   align-items: center;
 }
+
+.header form input {
+  border: 1px solid #fff;
+  padding: 10px;
+  margin: 5px;
+  border-radius: 5px;
+  background: #2a2d47;
+  color: #fff;
+}
+
+#button {
+  cursor: pointer;
+  padding: 13px;
+}
