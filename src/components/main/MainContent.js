@@ -1,7 +1,7 @@
 import React from 'react';
 import Description from './Description';
 import Image from './Image';
-import styles from './main.css';
+import './main.css';
 
 const MainContent = ({photo}) => {
   return (

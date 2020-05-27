@@ -6,7 +6,17 @@ const Header = props => {
     <header className='header'>
       <h1 className='title'>NASA Photo Of The Day</h1>
       <p className='date'>{props.date}</p>
-      <button onClick={() => {props.changeDate('2012-03-14')}}>Change Date</button>
+      <form onSubmit={e => {
+        e.preventDefault()
+        props.changeDate(document.querySelector('#date').value)
+        }}>
+        <input
+          id='date' 
+          type='date'
+          //value={props.date}
+        />
+        <input type='submit' value='Change Date!' />
+      </form>
     </header>
   )
 }
