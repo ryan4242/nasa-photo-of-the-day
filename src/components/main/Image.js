@@ -1,10 +1,23 @@
 import React from 'react';
+import styled from 'styled-components';
+
+const ImgContainer = styled.div`
+  margin-bottom: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
+
+const Img = styled.img`
+  height: 95vh;
+  padding-bottom: 1rem;
+`;
 
 const Image = props => {
   return (
-    <div className='img-container'>
-      <img src={props.src} alt={props.alt} />
-    </div>
+    <ImgContainer>
+      <Img src={props.src} alt={props.alt} />
+    </ImgContainer>
   )
 }
 

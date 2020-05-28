@@ -1,5 +1,4 @@
 import React from 'react';
-import './footer.css';
 import styled from 'styled-components';
 
 const FooterStyle = styled.footer`
